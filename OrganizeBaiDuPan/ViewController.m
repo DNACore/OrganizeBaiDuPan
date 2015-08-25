@@ -37,7 +37,7 @@
     _fileListArray=[_fileManager contentsOfDirectoryAtPath:_documentDirectory error:nil];
     NSLog(@"%@",[_fileManager subpathsOfDirectoryAtPath:_documentDirectory error:nil]);
     
-    [self GCDTEST];
+    //[self GCDTEST];
 }
 
 -(void)GCDTEST{
@@ -53,7 +53,7 @@
             NSLog(@"dspatch-2");
         }
     });
-    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
+    dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){//群组完成通知
         NSLog(@"end");
     });
     dispatch_group_notify(dispatchGroup, dispatch_get_main_queue(), ^(){
