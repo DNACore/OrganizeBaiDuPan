@@ -10,7 +10,7 @@
 #import "FMDB.h"
 #import "FileExplorerTableView.h"
 //#import "WaitingView.h"
-
+#import "KuaiPanViewController.h"
 #define IsIOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0 ? YES : NO)
 
 @interface ViewController ()
@@ -119,6 +119,7 @@
     // Dispose of any resources that can be recreated.
 }
 
+//打开数据库
 - (IBAction)openDB:(id)sender {
     BOOL isDir=NO;
     if ([_fileManager fileExistsAtPath:_netdiskDBPath isDirectory:&isDir]) {
@@ -151,18 +152,24 @@
     [self createDir];
 }
 
+//开始建立目录
 -(void)createDir{
     for (NSString *tmpDirName in _dirArray) {
         BOOL isDir=NO;
         NSString *dirFullPath=[NSString stringWithFormat:@"%@/%@",_documentDirectory,tmpDirName];
         BOOL exsited=[_fileManager fileExistsAtPath:[NSString stringWithFormat:@"%@/%@",_documentDirectory,tmpDirName] isDirectory:&isDir];
         if (!(isDir==YES&&exsited==YES)) {
-            [_fileManager createDirectoryAtPath:dirFullPath withIntermediateDirectories:YES attributes:nil error:nil];
+            NSError *error;
+            [_fileManager createDirectoryAtPath:dirFullPath withIntermediateDirectories:YES attributes:nil error:&error];
+            if (error) {
+                NSLog(@"建立目录error:%@",error);
+            }
         }
     }
     [self getFileList];
 }
 
+//获取本地已下载的文件列表
 -(void)getFileList{
     [_fileInfoArray removeAllObjects];
     FMResultSet *result=[_netdiskDB executeQuery:@"SELECT file_name,local_path,blocklistmd5  FROM transfilelist WHERE isdir=0"];
@@ -176,9 +183,11 @@
     [self renameAndMoveFileToDir];
 }
 
+//重命名文件并且移动到正确的位置
 -(void)renameAndMoveFileToDir{
     __block float progress=0;
     [_fileInfoArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        //NSFileManager的方法，主要是拼接路径
         [_fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/%@.%@",_documentDirectory,[obj objectForKey:@"blocklistmd5"],[obj objectForKey:@"externName"]] toPath:[NSString stringWithFormat:@"%@%@%@",_documentDirectory,[obj objectForKey:@"local_path"],[obj objectForKey:@"file_name"]] error:nil];
         [_progressView setProgress:((++progress)/_fileInfoArray.count) animated:YES];
     }];
@@ -211,6 +220,10 @@
 
 -(void)showAlertWithTitle:(NSString *)title message:(NSString *)message{
     
+}
+- (IBAction)goToKuaiPanAction:(id)sender {
+    KuaiPanViewController *vc=[[KuaiPanViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 #pragma marl - 表格数据源

@@ -21,6 +21,8 @@
 		20445DDD1A0B49C1000007B8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20445DDC1A0B49C1000007B8 /* libsqlite3.dylib */; };
 		20445E151A0DE6E9000007B8 /* FileExplorerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20445E141A0DE6E9000007B8 /* FileExplorerTableView.m */; };
 		20AAA1F31A528BAA00CC3A1D /* WaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AAA1F21A528BAA00CC3A1D /* WaitingView.m */; };
+		D6C28F021B8C49DD008D230E /* KuaiPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */; };
+		D6C28F031B8C49DD008D230E /* KuaiPanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		20445E141A0DE6E9000007B8 /* FileExplorerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileExplorerTableView.m; sourceTree = "<group>"; };
 		20AAA1F11A528BAA00CC3A1D /* WaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingView.h; sourceTree = "<group>"; };
 		20AAA1F21A528BAA00CC3A1D /* WaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingView.m; sourceTree = "<group>"; };
+		D6C28EFF1B8C49DD008D230E /* KuaiPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuaiPanViewController.h; sourceTree = "<group>"; };
+		D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuaiPanViewController.m; sourceTree = "<group>"; };
+		D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KuaiPanViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +88,7 @@
 		20445D661A0B0159000007B8 /* OrganizeBaiDuPan */ = {
 			isa = PBXGroup;
 			children = (
+				D6C28EFD1B8C49C4008D230E /* NetDisks */,
 				20445D6B1A0B0159000007B8 /* AppDelegate.h */,
 				20445D6C1A0B0159000007B8 /* AppDelegate.m */,
 				20445D6E1A0B0159000007B8 /* ViewController.h */,
@@ -134,6 +140,24 @@
 				20445DD41A0B3E9C000007B8 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		D6C28EFD1B8C49C4008D230E /* NetDisks */ = {
+			isa = PBXGroup;
+			children = (
+				D6C28EFE1B8C49C4008D230E /* KuaiPan */,
+			);
+			path = NetDisks;
+			sourceTree = "<group>";
+		};
+		D6C28EFE1B8C49C4008D230E /* KuaiPan */ = {
+			isa = PBXGroup;
+			children = (
+				D6C28EFF1B8C49DD008D230E /* KuaiPanViewController.h */,
+				D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */,
+				D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */,
+			);
+			path = KuaiPan;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +219,7 @@
 			files = (
 				20445D781A0B0159000007B8 /* LaunchScreen.xib in Resources */,
 				20445DDB1A0B3EC9000007B8 /* ViewController.xib in Resources */,
+				D6C28F031B8C49DD008D230E /* KuaiPanViewController.xib in Resources */,
 				20445D751A0B0159000007B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +240,7 @@
 				20445D6A1A0B0159000007B8 /* main.m in Sources */,
 				20445DD51A0B3E9C000007B8 /* FMDatabase.m in Sources */,
 				20445DD91A0B3E9C000007B8 /* FMResultSet.m in Sources */,
+				D6C28F021B8C49DD008D230E /* KuaiPanViewController.m in Sources */,
 				20445DD61A0B3E9C000007B8 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
