@@ -7,6 +7,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KuaiPanViewController">
             <connections>
+                <outlet property="progressLabel" destination="XYi-6u-kQR" id="b9N-DO-niC"/>
+                <outlet property="progressShow" destination="P8q-cv-MdH" id="1yp-sn-7zf"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -24,8 +26,28 @@
                         <action selector="dissmissAction:" destination="-1" eventType="touchUpInside" id="mWK-Wu-aww"/>
                     </connections>
                 </button>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-cv-MdH">
+                    <rect key="frame" x="8" y="151" width="584" height="2"/>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999/9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-6u-kQR">
+                    <rect key="frame" x="213" y="122" width="175" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="175" id="aqr-Ea-Md1"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="centerX" secondItem="XYi-6u-kQR" secondAttribute="centerX" id="9WK-tu-DjU"/>
+                <constraint firstAttribute="centerX" secondItem="P8q-cv-MdH" secondAttribute="centerX" id="Iq3-RR-0Db"/>
+                <constraint firstItem="P8q-cv-MdH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="a4R-zf-vMZ"/>
+                <constraint firstItem="P8q-cv-MdH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="151" id="fc7-mQ-aFZ"/>
+                <constraint firstItem="XYi-6u-kQR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="oKx-RU-smU"/>
+            </constraints>
+            <point key="canvasLocation" x="485" y="276"/>
         </view>
     </objects>
 </document>
