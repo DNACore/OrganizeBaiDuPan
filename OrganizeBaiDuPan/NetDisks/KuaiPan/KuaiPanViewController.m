@@ -32,13 +32,23 @@
     _fileManager=[NSFileManager defaultManager];
     _documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
     _netdiskDBPath=[NSString stringWithFormat:@"%@/%@",_documentDirectory,@"Master.sqlite"];
-    databaseQueue = [FMDatabaseQueue databaseQueueWithPath:_netdiskDBPath];
     
-    fileFullPathArray=[NSMutableArray array];
-    fileNameArray=[NSMutableArray array];
-    filePathArray=[NSMutableArray array];
-    fileHashArray = [NSMutableArray array];
-    [self getFilePath];
+    BOOL isDir=NO;
+    if ([_fileManager fileExistsAtPath:_netdiskDBPath isDirectory:&isDir]) {
+        
+        databaseQueue = [FMDatabaseQueue databaseQueueWithPath:_netdiskDBPath];
+        
+        fileFullPathArray=[NSMutableArray array];
+        fileNameArray=[NSMutableArray array];
+        filePathArray=[NSMutableArray array];
+        fileHashArray = [NSMutableArray array];
+        [self getFilePath];
+    }
+    else{
+        NSLog(@"快盘数据库文件不存在。");
+        return;
+    }
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -59,6 +69,7 @@
     // Pass the selected object to the new view controller.
 }
 */
+
 - (IBAction)dissmissAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -107,6 +118,10 @@
         [_fileManager moveItemAtPath:[NSString stringWithFormat:@"%@/LocalCache/OriginalFile/%@",_documentDirectory,obj]
                       toPath:[NSString stringWithFormat:@"%@/%@%@",_documentDirectory,[filePathArray objectAtIndex:idx],[fileNameArray objectAtIndex:idx]] error:nil];
     }];
+    
+    NSDateFormatter *dateFormatter=[[NSDateFormatter alloc]init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd-HH-mm-ss"];
+    [_fileManager moveItemAtPath:_netdiskDBPath toPath:[NSString stringWithFormat:@"%@/Master_%@.sqlite",_documentDirectory,[dateFormatter stringFromDate:[NSDate date]]] error:nil];
 }
 
 //计算sha1值

@@ -34,7 +34,7 @@
     NSMutableArray *o4=[NSMutableArray arrayWithObject:@"2"];
     NSArray *o5=[o4 copy];
     NSMutableArray *o6=[o4 mutableCopy];
-    NSLog(@"\nNSArrayo1:%p\nNSArrayo2:%p\nNSMutableArrayo3:%p\nNSMutableArrayo4:%pNSArrayo5:%p\nNSMutableArrayo6:%p",o1,o2,o3,o4,o5,o6);
+    NSLog(@"\nNSArrayo1:%p\nNSArrayo2:%p\nNSMutableArrayo3:%p\nNSMutableArrayo4:%p\nNSArrayo5:%p\nNSMutableArrayo6:%p",o1,o2,o3,o4,o5,o6);
     
     
 }
