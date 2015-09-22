@@ -29,26 +29,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    _fileManager=[NSFileManager defaultManager];
-    _documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
-    _netdiskDBPath=[NSString stringWithFormat:@"%@/%@",_documentDirectory,@"Master.sqlite"];
-    
-    BOOL isDir=NO;
-    if ([_fileManager fileExistsAtPath:_netdiskDBPath isDirectory:&isDir]) {
-        
-        databaseQueue = [FMDatabaseQueue databaseQueueWithPath:_netdiskDBPath];
-        
-        fileFullPathArray=[NSMutableArray array];
-        fileNameArray=[NSMutableArray array];
-        filePathArray=[NSMutableArray array];
-        fileHashArray = [NSMutableArray array];
-        [self getFilePath];
-    }
-    else{
-        NSLog(@"快盘数据库文件不存在。");
-        return;
-    }
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,6 +52,28 @@
 
 - (IBAction)dissmissAction:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)startProcessFile:(id)sender {
+    _fileManager=[NSFileManager defaultManager];
+    _documentDirectory = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    _netdiskDBPath=[NSString stringWithFormat:@"%@/%@",_documentDirectory,@"Master.sqlite"];
+    
+    BOOL isDir=NO;
+    if ([_fileManager fileExistsAtPath:_netdiskDBPath isDirectory:&isDir]) {
+        
+        databaseQueue = [FMDatabaseQueue databaseQueueWithPath:_netdiskDBPath];
+        
+        fileFullPathArray=[NSMutableArray array];
+        fileNameArray=[NSMutableArray array];
+        filePathArray=[NSMutableArray array];
+        fileHashArray = [NSMutableArray array];
+        [self getFilePath];
+    }
+    else{
+        NSLog(@"快盘数据库文件不存在。");
+        return;
+    }
 }
 
 //从数据库读取本地文件路径

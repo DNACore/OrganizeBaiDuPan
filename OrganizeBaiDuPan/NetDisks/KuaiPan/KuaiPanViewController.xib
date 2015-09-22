@@ -17,10 +17,10 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-Vs-ohn">
-                    <rect key="frame" x="70" y="60" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTR-Vs-ohn">
+                    <rect key="frame" x="8" y="202" width="252" height="30"/>
                     <state key="normal" title="返回">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="dissmissAction:" destination="-1" eventType="touchUpInside" id="mWK-Wu-aww"/>
@@ -29,7 +29,7 @@
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P8q-cv-MdH">
                     <rect key="frame" x="8" y="151" width="584" height="2"/>
                 </progressView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999/9999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-6u-kQR">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000/0000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYi-6u-kQR">
                     <rect key="frame" x="213" y="122" width="175" height="21"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="175" id="aqr-Ea-Md1"/>
@@ -38,14 +38,29 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pC3-sS-fil">
+                    <rect key="frame" x="340" y="202" width="252" height="30"/>
+                    <state key="normal" title="开始处理文件">
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="startProcessFile:" destination="-1" eventType="touchUpInside" id="FZC-m6-nVt"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="centerX" secondItem="XYi-6u-kQR" secondAttribute="centerX" id="9WK-tu-DjU"/>
+                <constraint firstItem="XTR-Vs-ohn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="Aqp-mi-1ay"/>
                 <constraint firstAttribute="centerX" secondItem="P8q-cv-MdH" secondAttribute="centerX" id="Iq3-RR-0Db"/>
+                <constraint firstItem="pC3-sS-fil" firstAttribute="width" secondItem="XTR-Vs-ohn" secondAttribute="width" id="Vf6-Jf-d3K"/>
+                <constraint firstAttribute="trailing" secondItem="pC3-sS-fil" secondAttribute="trailing" constant="8" id="YSJ-kS-bHc"/>
                 <constraint firstItem="P8q-cv-MdH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="a4R-zf-vMZ"/>
                 <constraint firstItem="P8q-cv-MdH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="151" id="fc7-mQ-aFZ"/>
+                <constraint firstItem="pC3-sS-fil" firstAttribute="leading" secondItem="XTR-Vs-ohn" secondAttribute="trailing" constant="80" id="nee-01-hb3"/>
                 <constraint firstItem="XYi-6u-kQR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="122" id="oKx-RU-smU"/>
+                <constraint firstItem="pC3-sS-fil" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="202" id="yQ4-ju-Ruk"/>
+                <constraint firstItem="XTR-Vs-ohn" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="202" id="z8C-sQ-uLK"/>
             </constraints>
             <point key="canvasLocation" x="485" y="276"/>
         </view>
