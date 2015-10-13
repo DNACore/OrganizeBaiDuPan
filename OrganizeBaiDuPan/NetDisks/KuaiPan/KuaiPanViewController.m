@@ -98,6 +98,7 @@
 
 //开始建立目录
 -(void)createDir{
+    NSLog(@"开始重命名文件");
     for (NSString *tmpDirName in filePathArray) {
         BOOL isDir=NO;
         NSString *dirFullPath=[NSString stringWithFormat:@"%@/%@",_documentDirectory,tmpDirName];
@@ -155,8 +156,10 @@
             NSString *sha1sumString=[self sha1:filedata];
             if (![obj isEqualToString:sha1sumString]) {
                 isFileHashError = YES;
-                NSLog(@"文件标称SHA1与计算SHA1不符：\n标称：%@\n计算：%@",obj,sha1sumString);
+//                NSString *data=[NSString stringWithFormat:@"文件标称SHA1与计算SHA1不符：\n标称：%@\n计算：%@\n文件名：%@",obj,sha1sumString,[fileFullPathArray objectAtIndex:idx]];
+                NSLog(@"文件标称SHA1与计算SHA1不符：\n标称：%@\n计算：%@\n文件名：%@",obj,sha1sumString,[fileFullPathArray objectAtIndex:idx]);
                 [errorHashArray addObject:obj];
+
             }
             
             NSUInteger fileCount=fileHashArray.count;

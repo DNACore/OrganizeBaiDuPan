@@ -18,9 +18,9 @@
 		20445DD81A0B3E9C000007B8 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 20445DD11A0B3E9C000007B8 /* FMDatabaseQueue.m */; };
 		20445DD91A0B3E9C000007B8 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 20445DD41A0B3E9C000007B8 /* FMResultSet.m */; };
 		20445DDB1A0B3EC9000007B8 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20445DDA1A0B3EC9000007B8 /* ViewController.xib */; };
-		20445DDD1A0B49C1000007B8 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20445DDC1A0B49C1000007B8 /* libsqlite3.dylib */; };
 		20445E151A0DE6E9000007B8 /* FileExplorerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20445E141A0DE6E9000007B8 /* FileExplorerTableView.m */; };
 		20AAA1F31A528BAA00CC3A1D /* WaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AAA1F21A528BAA00CC3A1D /* WaitingView.m */; };
+		D6349AA61BCCED1B00C0E8E2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6349AA51BCCED1B00C0E8E2 /* libsqlite3.0.tbd */; };
 		D6C28F021B8C49DD008D230E /* KuaiPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */; };
 		D6C28F031B8C49DD008D230E /* KuaiPanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */; };
 /* End PBXBuildFile section */
@@ -47,11 +47,11 @@
 		20445DD31A0B3E9C000007B8 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		20445DD41A0B3E9C000007B8 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		20445DDA1A0B3EC9000007B8 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
-		20445DDC1A0B49C1000007B8 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		20445E131A0DE6E9000007B8 /* FileExplorerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileExplorerTableView.h; sourceTree = "<group>"; };
 		20445E141A0DE6E9000007B8 /* FileExplorerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileExplorerTableView.m; sourceTree = "<group>"; };
 		20AAA1F11A528BAA00CC3A1D /* WaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingView.h; sourceTree = "<group>"; };
 		20AAA1F21A528BAA00CC3A1D /* WaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingView.m; sourceTree = "<group>"; };
+		D6349AA51BCCED1B00C0E8E2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		D6C28EFF1B8C49DD008D230E /* KuaiPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuaiPanViewController.h; sourceTree = "<group>"; };
 		D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuaiPanViewController.m; sourceTree = "<group>"; };
 		D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KuaiPanViewController.xib; sourceTree = "<group>"; };
@@ -62,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20445DDD1A0B49C1000007B8 /* libsqlite3.dylib in Frameworks */,
+				D6349AA61BCCED1B00C0E8E2 /* libsqlite3.0.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		20445D671A0B0159000007B8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				20445DDC1A0B49C1000007B8 /* libsqlite3.dylib */,
+				D6349AA51BCCED1B00C0E8E2 /* libsqlite3.0.tbd */,
 				20445D681A0B0159000007B8 /* Info.plist */,
 				20445D691A0B0159000007B8 /* main.m */,
 			);

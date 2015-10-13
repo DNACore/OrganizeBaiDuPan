@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController">
@@ -41,8 +41,8 @@
                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j6N-b3-uNJ">
                     <rect key="frame" x="20" y="221" width="560" height="2"/>
                 </progressView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jjn-Db-wVT" customClass="FileExplorerTableView">
-                    <rect key="frame" x="10" y="263" width="580" height="337"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="20" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jjn-Db-wVT" customClass="FileExplorerTableView">
+                    <rect key="frame" x="0.0" y="263" width="600" height="337"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="KIU-Ov-zPR"/>
@@ -50,7 +50,7 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AlR-IV-Pce">
-                    <rect key="frame" x="36" y="108" width="90" height="30"/>
+                    <rect key="frame" x="8" y="70" width="90" height="30"/>
                     <state key="normal" title="处理快盘文件">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
@@ -72,7 +72,7 @@
                 <constraint firstItem="jjn-Db-wVT" firstAttribute="centerX" secondItem="j6N-b3-uNJ" secondAttribute="centerX" id="k5v-MC-wOh"/>
                 <constraint firstItem="dIj-WF-OwP" firstAttribute="trailing" secondItem="M9N-XU-5qF" secondAttribute="trailing" id="lQH-dS-Nk9"/>
                 <constraint firstItem="jjn-Db-wVT" firstAttribute="top" secondItem="j6N-b3-uNJ" secondAttribute="bottom" constant="40" id="opH-xG-2aB"/>
-                <constraint firstItem="jjn-Db-wVT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="w3p-BB-Xsb"/>
+                <constraint firstItem="jjn-Db-wVT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="w3p-BB-Xsb"/>
             </constraints>
             <point key="canvasLocation" x="588" y="326"/>
         </view>
