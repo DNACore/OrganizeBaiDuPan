@@ -72,6 +72,21 @@
     }
     else{
         NSLog(@"快盘数据库文件不存在。");
+        
+//        UIAlertView *alert=[[UIAlertView alloc]initWithTitle:@"提示"
+//                                                     message:@"快盘数据库文件不存在"
+//                                                    delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
+//        [alert show];
+
+        UIAlertController *alertController=[UIAlertController alertControllerWithTitle:@"提示"
+                                                                               message:@"快盘数据库不存在"
+                                                                        preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *cancelAction=[UIAlertAction actionWithTitle:@"确定"
+                                                             style:UIAlertActionStyleCancel
+                                                           handler:nil];
+        [alertController addAction:cancelAction];
+        [self presentViewController:alertController animated:YES completion:nil];
+
         return;
     }
 }
@@ -151,6 +166,8 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         __block BOOL isFileHashError = NO;
         NSMutableArray *errorHashArray = [NSMutableArray array];
+        float fileCount=(float)fileHashArray.count;//提前转换数据类型，减小开销
+        unsigned long uFileCount =(unsigned long)fileHashArray.count;//提前转换数据类型，减小开销
         [fileHashArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             NSData *filedata=[NSData dataWithContentsOfFile:[NSString stringWithFormat:@"%@/LocalCache/OriginalFile/%@",_documentDirectory,obj]];
             NSString *sha1sumString=[self sha1:filedata];
@@ -162,10 +179,9 @@
 
             }
             
-            NSUInteger fileCount=fileHashArray.count;
             dispatch_async(dispatch_get_main_queue(), ^{
-                progressLabel.text=[NSString stringWithFormat:@"%lu/%lu",idx+1,(unsigned long)fileCount];
-                progressShow.progress=((float)(idx+1))/((float)fileCount);
+                progressLabel.text=[NSString stringWithFormat:@"%lu/%lu",idx+1,uFileCount];
+                progressShow.progress=((float)(idx+1))/fileCount;
             });
         }];
         if (isFileHashError) {
