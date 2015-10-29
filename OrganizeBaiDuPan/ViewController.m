@@ -12,6 +12,7 @@
 //#import "WaitingView.h"
 #import "KuaiPanViewController.h"
 #include <CommonCrypto/CommonDigest.h>
+#import "ChatTableViewController.h"
 #define IsIOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0 ? YES : NO)
 #define FileHashDefaultChunkSizeForReadingData 1024*8
 
@@ -245,6 +246,10 @@
 }
 - (IBAction)goToKuaiPanAction:(id)sender {
     KuaiPanViewController *vc=[[KuaiPanViewController alloc]init];
+    [self presentViewController:vc animated:YES completion:nil];
+}
+- (IBAction)openChat:(id)sender {
+    ChatTableViewController *vc=[[ChatTableViewController alloc]init];
     [self presentViewController:vc animated:YES completion:nil];
 }
 

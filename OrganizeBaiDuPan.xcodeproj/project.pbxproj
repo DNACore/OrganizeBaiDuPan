@@ -21,6 +21,12 @@
 		20445E151A0DE6E9000007B8 /* FileExplorerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20445E141A0DE6E9000007B8 /* FileExplorerTableView.m */; };
 		20AAA1F31A528BAA00CC3A1D /* WaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 20AAA1F21A528BAA00CC3A1D /* WaitingView.m */; };
 		D6349AA61BCCED1B00C0E8E2 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D6349AA51BCCED1B00C0E8E2 /* libsqlite3.0.tbd */; };
+		D6BAAD501BDF13E2005098CB /* ChatTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BAAD4E1BDF13E2005098CB /* ChatTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		D6BAAD511BDF13E2005098CB /* ChatTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BAAD4F1BDF13E2005098CB /* ChatTableViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		D6BAAD551BDF1738005098CB /* ChatTableViewCellSend.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BAAD531BDF1738005098CB /* ChatTableViewCellSend.m */; settings = {ASSET_TAGS = (); }; };
+		D6BAAD561BDF1738005098CB /* ChatTableViewCellSend.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BAAD541BDF1738005098CB /* ChatTableViewCellSend.xib */; settings = {ASSET_TAGS = (); }; };
+		D6BAAD5A1BDF1763005098CB /* ChatTableViewCellReceive.m in Sources */ = {isa = PBXBuildFile; fileRef = D6BAAD581BDF1763005098CB /* ChatTableViewCellReceive.m */; settings = {ASSET_TAGS = (); }; };
+		D6BAAD5B1BDF1763005098CB /* ChatTableViewCellReceive.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6BAAD591BDF1763005098CB /* ChatTableViewCellReceive.xib */; settings = {ASSET_TAGS = (); }; };
 		D6C28F021B8C49DD008D230E /* KuaiPanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */; };
 		D6C28F031B8C49DD008D230E /* KuaiPanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */; };
 /* End PBXBuildFile section */
@@ -52,6 +58,15 @@
 		20AAA1F11A528BAA00CC3A1D /* WaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaitingView.h; sourceTree = "<group>"; };
 		20AAA1F21A528BAA00CC3A1D /* WaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaitingView.m; sourceTree = "<group>"; };
 		D6349AA51BCCED1B00C0E8E2 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D6BAAD4D1BDF13E2005098CB /* ChatTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewController.h; sourceTree = "<group>"; };
+		D6BAAD4E1BDF13E2005098CB /* ChatTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewController.m; sourceTree = "<group>"; };
+		D6BAAD4F1BDF13E2005098CB /* ChatTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewController.xib; sourceTree = "<group>"; };
+		D6BAAD521BDF1738005098CB /* ChatTableViewCellSend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCellSend.h; sourceTree = "<group>"; };
+		D6BAAD531BDF1738005098CB /* ChatTableViewCellSend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCellSend.m; sourceTree = "<group>"; };
+		D6BAAD541BDF1738005098CB /* ChatTableViewCellSend.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCellSend.xib; sourceTree = "<group>"; };
+		D6BAAD571BDF1763005098CB /* ChatTableViewCellReceive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatTableViewCellReceive.h; sourceTree = "<group>"; };
+		D6BAAD581BDF1763005098CB /* ChatTableViewCellReceive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatTableViewCellReceive.m; sourceTree = "<group>"; };
+		D6BAAD591BDF1763005098CB /* ChatTableViewCellReceive.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatTableViewCellReceive.xib; sourceTree = "<group>"; };
 		D6C28EFF1B8C49DD008D230E /* KuaiPanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuaiPanViewController.h; sourceTree = "<group>"; };
 		D6C28F001B8C49DD008D230E /* KuaiPanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuaiPanViewController.m; sourceTree = "<group>"; };
 		D6C28F011B8C49DD008D230E /* KuaiPanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = KuaiPanViewController.xib; sourceTree = "<group>"; };
@@ -88,6 +103,7 @@
 		20445D661A0B0159000007B8 /* OrganizeBaiDuPan */ = {
 			isa = PBXGroup;
 			children = (
+				D6BAAD471BDF10A2005098CB /* ChatViewController */,
 				D6C28EFD1B8C49C4008D230E /* NetDisks */,
 				20445D6B1A0B0159000007B8 /* AppDelegate.h */,
 				20445D6C1A0B0159000007B8 /* AppDelegate.m */,
@@ -140,6 +156,22 @@
 				20445DD41A0B3E9C000007B8 /* FMResultSet.m */,
 			);
 			path = fmdb;
+			sourceTree = "<group>";
+		};
+		D6BAAD471BDF10A2005098CB /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				D6BAAD4D1BDF13E2005098CB /* ChatTableViewController.h */,
+				D6BAAD4E1BDF13E2005098CB /* ChatTableViewController.m */,
+				D6BAAD4F1BDF13E2005098CB /* ChatTableViewController.xib */,
+				D6BAAD521BDF1738005098CB /* ChatTableViewCellSend.h */,
+				D6BAAD531BDF1738005098CB /* ChatTableViewCellSend.m */,
+				D6BAAD541BDF1738005098CB /* ChatTableViewCellSend.xib */,
+				D6BAAD571BDF1763005098CB /* ChatTableViewCellReceive.h */,
+				D6BAAD581BDF1763005098CB /* ChatTableViewCellReceive.m */,
+				D6BAAD591BDF1763005098CB /* ChatTableViewCellReceive.xib */,
+			);
+			path = ChatViewController;
 			sourceTree = "<group>";
 		};
 		D6C28EFD1B8C49C4008D230E /* NetDisks */ = {
@@ -220,6 +252,9 @@
 				20445D781A0B0159000007B8 /* LaunchScreen.xib in Resources */,
 				20445DDB1A0B3EC9000007B8 /* ViewController.xib in Resources */,
 				D6C28F031B8C49DD008D230E /* KuaiPanViewController.xib in Resources */,
+				D6BAAD561BDF1738005098CB /* ChatTableViewCellSend.xib in Resources */,
+				D6BAAD5B1BDF1763005098CB /* ChatTableViewCellReceive.xib in Resources */,
+				D6BAAD511BDF13E2005098CB /* ChatTableViewController.xib in Resources */,
 				20445D751A0B0159000007B8 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,8 +274,11 @@
 				20445DD81A0B3E9C000007B8 /* FMDatabaseQueue.m in Sources */,
 				20445D6A1A0B0159000007B8 /* main.m in Sources */,
 				20445DD51A0B3E9C000007B8 /* FMDatabase.m in Sources */,
+				D6BAAD551BDF1738005098CB /* ChatTableViewCellSend.m in Sources */,
+				D6BAAD5A1BDF1763005098CB /* ChatTableViewCellReceive.m in Sources */,
 				20445DD91A0B3E9C000007B8 /* FMResultSet.m in Sources */,
 				D6C28F021B8C49DD008D230E /* KuaiPanViewController.m in Sources */,
+				D6BAAD501BDF13E2005098CB /* ChatTableViewController.m in Sources */,
 				20445DD61A0B3E9C000007B8 /* FMDatabaseAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

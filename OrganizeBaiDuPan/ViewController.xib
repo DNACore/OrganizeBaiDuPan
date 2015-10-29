@@ -58,6 +58,13 @@
                         <action selector="goToKuaiPanAction:" destination="-1" eventType="touchUpInside" id="fkP-FV-JKC"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mlz-2C-7NI">
+                    <rect key="frame" x="8" y="117" width="60" height="30"/>
+                    <state key="normal" title="对话界面"/>
+                    <connections>
+                        <action selector="openChat:" destination="-1" eventType="touchUpInside" id="A7I-7t-bvv"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
